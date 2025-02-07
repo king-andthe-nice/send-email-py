@@ -1,0 +1,24 @@
+
+name: Run Docker Container
+
+on:
+  schedule:
+    # 每天凌晨1点运行 (UTC时间，对应北京时间上午9点)
+    - cron: '0 1 * * *'
+  # 添加手动触发功能
+  workflow_dispatch:
+
+jobs:
+  run-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v3
+
+      - name: Run Docker container
+        run: |
+          docker pull king210319/email-sender  # 替换为您的Docker镜像
+          docker run king210319/email-sender    # 运行您的Docker容器
