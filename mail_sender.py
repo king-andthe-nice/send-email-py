@@ -7,7 +7,7 @@ class EmailSender:
         # 配置发送方信息（需要修改为你的QQ邮箱和授权码）
         sender = '3356369582@qq.com'  # 必须与登录邮箱一致
         password = 'vdraphgvsncjdaee'  # 替换为QQ邮箱的授权码
-        receivers = ['1806751665@qq.com']  # 替换为接收方邮箱
+        receivers = ['3574587488@qq.com']  # 替换为接收方邮箱
         
 
         # 创建邮件内容
